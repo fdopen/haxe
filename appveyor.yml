@@ -48,9 +48,9 @@ install:
 build_script:
     - 'cd %APPVEYOR_BUILD_FOLDER%'
     - 'set PATH=%PATH%;%APPVEYOR_BUILD_FOLDER%'
-    - '%CYG_ROOT%/bin/bash -lc "cd \"$OLDPWD\" && make -s -f Makefile.win"'
-    - '%CYG_ROOT%/bin/bash -lc "cd \"$OLDPWD\" && make -s -f Makefile.win tools"'
-    - '%CYG_ROOT%/bin/bash -lc "cd \"$OLDPWD\" && make -s -f Makefile.win package_bin"'
+    - '%CYG_ROOT%/bin/bash -lc "cd \"$OLDPWD\" && make -f Makefile.win"'
+    - '%CYG_ROOT%/bin/bash -lc "cd \"$OLDPWD\" && make -f Makefile.win tools"'
+    - '%CYG_ROOT%/bin/bash -lc "cd \"$OLDPWD\" && make -f Makefile.win package_bin"'
     - dir %APPVEYOR_BUILD_FOLDER%\out
     - cd %APPVEYOR_BUILD_FOLDER%/tests/
     - mkdir "%HAXELIB_ROOT%"
